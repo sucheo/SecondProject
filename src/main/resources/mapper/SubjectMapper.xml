@@ -81,7 +81,6 @@
         VALUES
         <foreach collection="list" item="item" separator=",">
             (#{item.userid},#{item.subjectid})
-
         </foreach>
     </insert>
 
