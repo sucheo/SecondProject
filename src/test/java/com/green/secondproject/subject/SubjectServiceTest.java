@@ -130,17 +130,17 @@ public class SubjectServiceTest {
         List<SubjectVo2> list = new ArrayList<>();
         SubjectVo2 vo2 = new SubjectVo2();
         SubjectDto dto = new SubjectDto();
-        dto.setUserid(FACADE.getLoginUserPk());
+        dto.setUserId(FACADE.getLoginUserPk());
         vo2.setNm("화법과 언어");
-        vo2.setSubjectid(1L);
-        vo2.setUserid(FACADE.getLoginUserPk());
+        vo2.setSubjectId(1L);
+        vo2.setUserId(FACADE.getLoginUserPk());
         list.add(vo2);
 
         when(mapper.smalllist(dto)).thenReturn(list);
         List<SubjectVo2> list1 = service.smalllist(dto);
         assertEquals(list.get(0).getNm(),list1.get(0).getNm());
-        assertEquals(list.get(0).getUserid(),list1.get(0).getUserid());
-        assertEquals(list.get(0).getSubjectid(),list1.get(0).getSubjectid());
+        assertEquals(list.get(0).getUserId(),list1.get(0).getUserId());
+        assertEquals(list.get(0).getSubjectId(),list1.get(0).getSubjectId());
     }
     @Test
     @DisplayName("smallList - 학급수(반)")
